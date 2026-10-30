@@ -18,8 +18,46 @@ STEP-3: Now read the keyword depending on the number of columns of the plain tex
 STEP-4: Arrange the characters of the keyword in sorted order and the corresponding columns of the plain text.
 STEP-5: Read the characters row wise or column wise in the former order to get the cipher text.
 
-# PROGRAM
+# PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char text[100];
+char rail[3][100];
+int i, j, row = 0, dir = 1;
+int len;
+printf("Enter the plain text: ");
+scanf("%99s", text);
+len = strlen(text);
+for (i = 0; i < 3; i++)
+for (j = 0; j < len; j++)
+rail[i][j] = '\0';
+for (i = 0; i < len; i++)
+{
+rail[row][i] = text[i];
+if (row == 2)
+dir = -1;
+else if (row == 0)
+dir = 1;
+row += dir;
+}
+printf("Cipher text: ");
+for (i = 0; i < 3; i++)
+for (j = 0; j < len; j++)
+if (rail[i][j] != '\0')
+printf("%c", rail[i][j]);
+printf("\n");
+return 0;
+}
+```
 
 # OUTPUT
+Enter the plain text: Swathi
 
-# RESULT
+Cipher text: Shwtia
+<img width="373" height="137" alt="image" src="https://github.com/user-attachments/assets/ca718966-fd0c-4b51-91b3-6ca665f911ad" />
+
+# RESULT:
+Thus, the Rail Fence Cipher was implemented successfully in C.
