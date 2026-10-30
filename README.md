@@ -59,8 +59,9 @@ return 0;
 
 # OUTPUT
 Enter the plain text: Swathi
-
 Cipher text: Shwtia
+
+
 <img width="373" height="137" alt="image" src="https://github.com/user-attachments/assets/ca718966-fd0c-4b51-91b3-6ca665f911ad" />
 
 # RESULT:
