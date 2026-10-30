@@ -59,6 +59,7 @@ return 0;
 
 # OUTPUT
 Enter the plain text: Swathi
+
 Cipher text: Shwtia
 
 
